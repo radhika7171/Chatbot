@@ -1,0 +1,40 @@
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+
+    <p>Please select appointmnet method:</p>
+  <input type="radio" id="A" name="appointment_method" value="Audio Call Appointment">
+  <label for="A">Audio Call Appointment</label><br>
+  <input type="radio" id="V" name="appointment_method" value="Video Call Appointment">
+  <label for="V">Audio Call Appointment</label><br>
+  <input type="radio" id="P" name="appointment_method" value="In-Person Physical Appointment">
+  <label for="P">In-Person Physical Appointment</label>
+
+  <br>  
+
+  <p>Please select your preffered day of week:</p>
+  <input type="radio" id="Mon" name="day" value="Monday">
+  <label for="Mon">Monday</label><br>
+
+  <input type="radio" id="Tue" name="day" value="Tuesday">
+  <label for="Tue">Tuesday</label><br>
+
+  <input type="radio" id="Wed" name="day" value="Wednesday">
+  <label for="Wed">Wednesday</label><br>
+
+  <input type="radio" id="Thur" name="day" value="Thursday">
+  <label for="Thur">Thursday</label><br>
+
+  <input type="radio" id="Fri" name="day" value="Friday">
+  <label for="Fri">Friday</label><br>
+
+  <input type="radio" id="Sat" name="day" value="Saturday">
+  <label for="Sat">Saturday</label><br>
+
+  <br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
