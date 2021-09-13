@@ -19,6 +19,9 @@ class CreateAppointmentAdmin(admin.ModelAdmin):
         return self.first_name
 
 
-class CreateFutureAppointmentAdmin(admin.ModelAdmin):
+class CreateFutureAppointmentAdmin(admin.TabularInline):
+    model = CreateFutureAppointment
+
     list_display_1 = ("id", "Appointment_method")
     list_display_2 = ("id", "preferred_day_choice")
+    response = 'second_appointment.html'
